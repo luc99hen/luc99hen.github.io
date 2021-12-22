@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https://luc99hen.github.io"
 title: CLog
 paginate: 5
 theme: PaperMod
@@ -28,7 +28,7 @@ taxonomies:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: CLog
-  description: "ExampleSite description"
+  description: "luc's blog"
   keywords: [Blog, Portfolio, PaperMod]
   author: Me
   # author: ["Me", "You"] # multiple authors
@@ -67,7 +67,7 @@ params:
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: ExampleSite
+    title: CLog
     subtitle: "This is subtitle"
     imageUrl: "<img location>"
     imageWidth: 120
@@ -99,7 +99,7 @@ params:
     - name: zhihu
       url: "https://www.zhihu.com/people/luc99"
     - name: rss
-      url: "https://examplesite.com/index.xml"
+      url: "https://luc99hen.github.io/index.xml"
 
   analytics:
     google:
@@ -115,7 +115,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/luc99hen.github.io/content"
     Text: "Source on GitHub" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -134,7 +134,7 @@ menu:
   main:
     - identifier: home
       name: Home
-      url: https://examplesite.com/
+      url: https://luc99hen.github.io
       weight: 5
     - identifier: search
       name: Search
