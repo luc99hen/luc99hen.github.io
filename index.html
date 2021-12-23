@@ -6,12 +6,12 @@
 <title>CLog</title>
 <meta name=keywords content="Blog,Portfolio,PaperMod">
 <meta name=description content="luc's blog">
-<meta name=author content="Me">
+<meta name=author content="Lu Chen">
 <link rel=canonical href=https://luc99hen.github.io/>
 <meta name=google-site-verification content="XYZabc">
 <meta name=yandex-verification content="XYZabc">
 <meta name=msvalidate.01 content="XYZabc">
-<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.26705bb432bea94fc6dfab50b24c692d55c642871c1373aa490b89ba0457594a.css integrity="sha256-JnBbtDK+qU/G36tQskxpLVXGQoccE3OqSQuJugRXWUo=" rel="preload stylesheet" as=style>
 <link rel=preload href=/logo.png as=image>
 <link rel=icon href=https://luc99hen.github.io/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://luc99hen.github.io/%3Clink%20/%20abs%20url%3E>
@@ -25,6 +25,7 @@
 <link rel=alternate type=application/json href=https://luc99hen.github.io/index.json>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="CLog">
 <meta property="og:description" content="luc's blog">
@@ -36,8 +37,8 @@
 <meta name=twitter:description content="luc's blog">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"CLog","url":"https://luc99hen.github.io","description":"luc\u0026#39;s blog","thumbnailUrl":"https://luc99hen.github.io/favicon.ico","sameAs":["https://github.com/luc99hen","https://twitter.com/luc99hen","https://weibo.com/6052664005","https://www.zhihu.com/people/luc99","https://luc99hen.github.io/index.xml"]}</script>
 </head>
-<body class="list dark" id=top>
-<script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove('dark')</script>
+<body class=list id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -111,7 +112,9 @@
 单体应用 课程项目，一个庞大的后端，MVC 范式, 存在 module 但是 module 之间强耦合（无法独立存在） 初期易于开发，测试，维护；随着需求的扩增以及开发团队的变更，代码库变得臃肿，维护成本高。扩展性差。 分布式应用 单体应用（单台机器）难以适应日益增长的用户需求访问，需要将一个庞大的系统拆分成不同的业务模块，部署到不同的机器，各个业务模块通过事先约定的接口进行网络通信。数据库使用分布式数据库 TiDB 代替传统的数据库 MySQL。通过一个反向代理服务器 Nginx 代理用户请求，把请求压力分摊到多台机器上。 提升了负载能力，解决了高并发需求。伸缩性差，运维成本高；模块间通信成本高。 微服务架构 Docker 为代表的容器技术诞生，将物理机级别的分布式提升到容器级别的分布式。 物理级别分布式的潜在问题，多服务（一组进程）共享同一机器时产生的资源竞争问题，安全性问题。 容器技术让各个服务运行在抽象的容器中，共享同一台物理机的资源的同时相互隔离，互不干扰。容器技术相比于传统的虚拟机技术性能损失小，启动快。 K8s 管理一组容器（集群）的平台。监控容器运行状态自动重启，管理容器间的网络通信进行网络代理，自动伸缩动态调度资源。 Service Mesh，接管微服务中的分布式通信模块，K8s 生态中的网络管理插件。 总结 简单的事情变复杂（模块间函数调用需要依靠 RPC 网络参与，出现了网络可靠性，服务发现，网络延迟等相关问题），复杂的事情变简单（用户原本只是先写一个模块间的函数调用罢了，用户只需要也只应该关注业务开发而不是把开发和运维搅在一起） 应用与“云”技术结合越来越紧密。从与云完全无关（单体应用）到云服务器，云数据库；到基于云的微服务架构。 云原生概念的提出 云原生是指从云的原生应用角度出发，一整套设计、开发、部署、运行、维护的流程、技术栈以及背后文化理念的统称。
 围绕着云进行软件开发的一套标准化、系统化的方案。云原生应用天然具备弹性扩展，快速迭代交付，开发成本低等优势；另外分布式带来的运维成本正在被云原生社区活跃的新方案逐步解决。...</p>
 </section>
-<footer class=entry-footer><span title="2021-12-21 00:00:00 +0000 UTC">December 21, 2021</span>&nbsp;·&nbsp;陈璐</footer>
+<footer class=entry-footer>
+<span class="date-info italic"><b><i> December 23, 2021 </i></b></span>
+</footer>
 <a class=entry-link aria-label="post link to 测试中文" href=https://luc99hen.github.io/posts/%E4%B8%AD%E6%96%87%E5%8D%9A%E5%AE%A2/></a>
 </article>
 <article class=post-entry>
@@ -123,7 +126,9 @@
 <p>云原生技术概述 什么是云原生？为什么它将是软件开发的未来形态？
 云原生——软件行业的“集装箱革命” “集装箱”的出现是实体货物包装，运输，交付方式的一场革命。 “没有集装箱，不可能有全球化”——经济学家杂志 经济全球化的基础是一个高效（低成本，低复杂性，自动化）的全球运输系统，集装箱是这个系统的核心。 这个系统不仅仅包括集装箱本身，还包括围绕着标准化的集装箱打造的一整套货物流转的新方法以及与之配套的基础设施。包括港口，公路，桥梁，隧道，货船，起重机，卡车以及发货人的操作方式。 集装箱让全世界的物流运输业使用一种“语言”，一套标准；标准化与系统化的运输系统，极大地降低了货物运输的成本，降低了货物在全球流转的门槛。重要的不是集装箱，而是围绕集装箱打造的一套标准化、系统化的方案。 云原生对 IT 领域的意义就像集装箱，只是其中承载的不再是实体货物，而是虚拟世界的二进制代码和软件。 这是一张图片 </p>
 </section>
-<footer class=entry-footer><span title="2021-12-21 00:00:00 +0000 UTC">December 21, 2021</span>&nbsp;·&nbsp;陈璐</footer>
+<footer class=entry-footer>
+<span class="date-info italic"><b><i> December 21, 2021 </i></b></span>
+</footer>
 <a class=entry-link aria-label="post link to 测试图片" href=https://luc99hen.github.io/posts/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/></a>
 </article>
 <article class=post-entry>
@@ -135,7 +140,10 @@
 <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
 ...</p>
 </section>
-<footer class=entry-footer><span title="2021-12-20 00:00:00 +0000 UTC">December 20, 2021</span>&nbsp;·&nbsp;Lu Chen</footer>
+<footer class=entry-footer>
+<span class="date-info italic"><b><i> December 20, 2021 </i></b></span>
+&nbsp;·&nbsp; <span><i> LastMod: December 26, 2021 </i></span>
+</footer>
 <a class=entry-link aria-label="post link to Test Post" href=https://luc99hen.github.io/posts/my-first-post/></a>
 </article>
 </main>
