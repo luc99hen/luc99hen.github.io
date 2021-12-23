@@ -1,7 +1,7 @@
 ---
-author: Lu Chen
 title: Test Post
 date: 2021-12-20
+lastmod: 2021-12-26
 description: A brief guide to setup KaTeX
 math: true
 ShowBreadCrumbs: false

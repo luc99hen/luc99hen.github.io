@@ -9,6 +9,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
+enableGitInfo: true
 
 googleAnalytics: UA-123-45
 
@@ -25,30 +26,39 @@ outputs:
 taxonomies:
   tag: tags
 
+frontmatter:
+  date:
+    - date
+    - publishDate
+    - lastmod
+  lastmod:
+    - lastmod
+    - :git
+    - date
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: CLog
   description: "luc's blog"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Me
-  # author: ["Me", "You"] # multiple authors
+  author: Lu Chen
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: dark # dark, light
+  defaultTheme: auto # dark, light
   disableThemeToggle: false
 
   ShowReadingTime: false
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: true
   hidemeta: false
   hideSummary: false
-  showtoc: false
-  tocopen: false
+  showtoc: true
+  tocopen: true
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -115,8 +125,8 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/luc99hen.github.io/content"
-    Text: "Source on GitHub" # edit text
+    URL: "https://github.com/luc99hen/luc99hen.github.io/tree/main/content"
+    Text: "Edit on GitHub" # edit text
     appendFilePath: true # to append file path to Edit link
 
   # for search

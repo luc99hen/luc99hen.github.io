@@ -1,0 +1,7 @@
+{{ $date := .Date.Format (default "January 2, 2006" .Site.Params.DateFormat) }}
+{{ $lastmod := .Lastmod.Format (default "January 2, 2006" .Site.Params.DateFormat) }}
+
+<span class="date-info italic"><b><i> {{ $date }} </i></b></span> 
+{{ if ne $lastmod $date }}
+    &nbsp;·&nbsp; <span><i> LastMod: {{ .Lastmod.Format (default "January 2, 2006" .Site.Params.DateFormat) }} </i></span>
+{{ end }}

@@ -1,7 +1,7 @@
 ---
-author: 陈璐
 title: 测试图片
 date: 2021-12-21
+lastmod: 2021-12-21
 description: 图片测试
 math: false
 ShowBreadCrumbs: true
