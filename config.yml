@@ -11,7 +11,7 @@ buildExpired: false
 enableEmoji: true
 enableGitInfo: true
 
-googleAnalytics: G-SSKWWXV68W
+# googleAnalytics: G-SSKWWXV68W
 
 minify:
   disableXML: true
@@ -112,8 +112,8 @@ params:
       url: "https://luc99hen.github.io/index.xml"
 
   analytics:
-    google:
-      SiteVerificationTag: "G-SSKWWXV68W"
+  # google:
+  #   SiteVerificationTag: "G-SSKWWXV68W"
   #   bing:
   #     SiteVerificationTag: "XYZabc"
   #   yandex:
