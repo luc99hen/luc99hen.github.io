@@ -11,7 +11,7 @@ buildExpired: false
 enableEmoji: true
 enableGitInfo: true
 
-googleAnalytics: UA-123-45
+googleAnalytics: G-SSKWWXV68W
 
 minify:
   disableXML: true
@@ -113,7 +113,7 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: "G-SSKWWXV68W"
     bing:
       SiteVerificationTag: "XYZabc"
     yandex:
